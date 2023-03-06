@@ -15,7 +15,7 @@ export default function Home() {
   // numberOfWhitelisted tracks the number of addresses's whitelisted
   const [numberOfWhitelisted, setNumberOfWhitelisted] = useState(0);
   // Create a reference to the Web3 Modal (used for connecting to Metamask) which persists as long as the page is open
-  const web3ModalRef = useRef(new Web3Modal());
+  const web3ModalRef = useRef();
 
   /**
    * Returns a Provider or Signer object representing the Ethereum RPC with or without the
@@ -201,7 +201,8 @@ export default function Home() {
         <div>
           <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
           <div className={styles.description}>
-            Its an NFT collection for developers in Crypto.
+            {/* Using HTML Entities for the apostrophe */}
+            It&#39;s an NFT collection for developers in Crypto.
           </div>
           <div className={styles.description}>
             {numberOfWhitelisted} have already joined the Whitelist
